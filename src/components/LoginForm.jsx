@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import LoginFrontend from './LoginFrontend';
 
 const LoginForm = () => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
@@ -29,7 +30,9 @@ const LoginForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <>
+    <LoginFrontend props={credentials} />
+    {/* <form onSubmit={onSubmit}>
       <div>
         <label>Email:</label>
         <input type="email" name="email" value={credentials.email} onChange={onChange} required />
@@ -39,7 +42,8 @@ const LoginForm = () => {
         <input type="password" name="password" value={credentials.password} onChange={onChange} required />
       </div>
       <button type="submit">Login</button>
-    </form>
+    </form> */}
+    </>
   );
 };
 

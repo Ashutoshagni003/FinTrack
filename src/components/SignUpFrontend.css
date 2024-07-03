@@ -1,0 +1,24 @@
+.singleLine{
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    /* margin-top: 20px 0; */
+}
+.wel{
+    /* margin: 12px 0; */
+    font-size: 25px;
+}
+.leftContainer{
+    width: 80%;
+    height: 80%;
+    border: 2px solid #000;
+
+}
+.leftChild{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}

@@ -1,8 +1,7 @@
 const jwt = require('jsonwebtoken');
 const JWT_SECRET = 'Ashutoshisagoodb$oy';
 
-
-module.exports = function(req, res, next) {
+module.exports = function (req, res, next) {
   const token = req.header('x-auth-token');
 
   if (!token) {
