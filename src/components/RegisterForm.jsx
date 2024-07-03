@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import "./SignUpFrontend.css"
 
 const RegisterForm = () => {
   const navigateTo = useNavigate();
@@ -34,22 +35,37 @@ const RegisterForm = () => {
 
   return (
     <>
+    <div className="parent">
+    <div className="leftChild">
+      <div className="leftContainer">
+      <h1>FinTrack</h1>
+      <p className="wel">Create Account</p>
+      <div className="singleLine"><p >Already our Member? </p><Link to="/login">Log In</Link></div>
+      
       <form onSubmit={onSubmit}>
         <div>
-          <label>Name:</label>
+          <label>Name:</label><br/>
           <input type="text" name="name" value={credentials.name} onChange={onChange} required />
         </div>
         <div>
-          <label>Email:</label>
+          <label>Email:</label><br/>
           <input type="email" name="email" value={credentials.email} onChange={onChange} required />
         </div>
         <div>
-          <label>Password:</label>
+          <label>Password:</label><br/>
           <input type="password" name="password" value={credentials.password} onChange={onChange} required />
         </div>
-        <button type="submit">Register</button>
+        <button type="submit" className='btn'>Register</button>
         <ToastContainer />
       </form>
+      </div>
+    </div>
+    <div className="rightChild">
+
+    </div>
+
+    </div>
+      
     </>
   );
 };
